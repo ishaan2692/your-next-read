@@ -42,7 +42,7 @@ genres = [
     'Literary Fiction', 'Crime', 'Humor', 'Spirituality', 'Philosophy',
     'Travel', 'Science', 'Technology', 'Art', 'Cookbooks', 'Drama', 
     'Short Stories', 'Children Literature', 'Western', 'Chick Lit',
-    'Political Fiction', 'War', 'True Crime', 'New Adult', 'Urban Fantasy', 'Smut'
+    'Political Fiction', 'War', 'True Crime', 'New Adult', 'Urban Fantasy'
 ]
 
 # Step 1: Ask the user for their desired genres
