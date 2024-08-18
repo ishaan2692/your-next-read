@@ -13,11 +13,6 @@ AI_AVATAR_ICON = '🦝'
 
 st.write('# Your Next Read')
 
-# Button to restart the session
-if st.button('Restart Session'):
-    st.session_state.clear()
-    st.experimental_rerun()
-
 # Initialize chat history and AI response flag
 if 'messages' not in st.session_state:
     st.session_state.messages = []
