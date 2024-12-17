@@ -23,22 +23,23 @@ if 'gemini_history' not in st.session_state:
 if 'ai_responded' not in st.session_state:
     st.session_state.ai_responded = False
 
-st.session_state.model = genai.GenerativeModel('gemini-pro')
+st.session_state.model =  genai.GenerativeModel('gemini-1.5-flash-latest') #genai.GenerativeModel('gemini-pro') #model is discontinued
 st.session_state.chat = st.session_state.model.start_chat(
     history=st.session_state.gemini_history
 )
 
 # Define possible book genres
 genres = [
-    'Science Fiction', 'Fantasy', 'Mystery', 'Thriller', 'Romance',
-    'Non-fiction', 'Historical Fiction', 'Horror', 'Biography', 'Self-Help',
-    'Adventure', 'Classics', 'Poetry', 'Graphic Novels', 'Young Adult',
-    'Dystopian', 'Memoir', 'Psychological Thriller', 'Contemporary Fiction',
-    'Literary Fiction', 'Crime', 'Humor', 'Spirituality', 'Philosophy',
-    'Travel', 'Science', 'Technology', 'Art', 'Cookbooks', 'Drama', 
-    'Short Stories', 'Children Literature', 'Western', 'Chick Lit',
-    'Political Fiction', 'War', 'True Crime', 'New Adult', 'Urban Fantasy'
+    'Science Fiction', 'Fantasy', 'Mystery', 'Thriller', 
+    'Non-fiction', 'Historical Fiction', 'Horror', 'Biography', 
+    'Self-Help', 'Adventure', 'Classics', 'Poetry', 'Graphic Novels', 
+    'Young Adult', 'Dystopian', 'Memoir', 'Psychological Thriller', 
+    'Contemporary Fiction', 'Literary Fiction', 'Crime', 'Humor', 
+    'Spirituality', 'Philosophy', 'Travel', 'Science', 'Technology', 
+    'Art', 'Cookbooks', 'Drama', 'Short Stories', 'Children Literature', 
+    'Western', 'Political Fiction', 'War', 'True Crime', 'Urban Fantasy'
 ]
+#removed genres which'll result explicit results
 
 # Step 1: Ask the user for their desired genres
 selected_genres = st.multiselect(
